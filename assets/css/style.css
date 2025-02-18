@@ -206,6 +206,13 @@ a:hover {
 .bold-link {
     font-weight: bold;
 }
+@media (min-width: 1024px) { /* Se aplică doar pe desktop */
+    table {
+        width: 90%; /* Ajustează dimensiunea tabelului */
+        margin-left: auto; /* Centrează tabelul */
+        margin-right: auto;
+    }
+}
 
 /* End table*/
 
@@ -574,8 +581,8 @@ a:hover {
         padding: 5px 0;
     }
     .acasa-page nav ul li a {
-        font-size: 18px; /* Mărimea fontului pe mobil */
-        font-family: Arial, sans-serif;
+        font-size: 20px; /* Mărimea fontului pe mobil */
+        font-family: 'Times New Roman', Times, serif;
         color: white;
         text-decoration: none;
     }
@@ -617,13 +624,110 @@ a:hover {
         line-height: 0;
     }
     body:not(.acasa-page) header nav ul li a {
-        font-size: 14px; /* Font mai mic pe mobil */
+        font-size: 13px; /* Font mai mic pe mobil */
         padding: 3px 3px; /* Reduți padding-ul pentru a ajusta distanțele pe mobil */
         text-align: center; 
         line-height: 2;
+        font-family: 'Times New Roman', Times, serif;
     }
     body:not(.acasa-page) header {
         padding: 5px 10px; /* Reducem padding-ul general din header */
+    }
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto; /* Permite scroll orizontal dacă tabelul e prea mare */
+        white-space: nowrap; /* Evită ca textul să se spargă aiurea */
+    }
+    th, td {
+        font-size: 11.5px; /* Micșorăm fontul pentru a încăpea mai bine */
+        padding: 8px;
+    }
+    #foto {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden; /* Elimină complet scroll-ul orizontal */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centrează imaginile */
+        padding: 0; /* Elimină orice padding care împinge imaginile */
+        box-sizing: border-box; /* Asigură că padding-ul nu afectează lățimea */
+    }
+    
+    #foto img.foto {
+        display: block;
+        margin: 10px;
+        max-width: calc(33.33% - 20px); /* Pe desktop: 3 imagini pe rând */
+        width: auto;
+        height: auto;
+    }
+    .despre-img {
+        width: 90%; /* Se ajustează la lățimea containerului */
+        max-width: 800px; /* Setează o lățime maximă rezonabilă */
+        display: block;
+        margin: 20px auto; /* Adaugă spațiu și centrează */
+        
+    }
+}
+@media (max-width: 768px) {
+    p {
+        text-align: left; /* Elimină justify pentru a evita spațiile mari */
+        word-break: break-word; /* Împiedică formarea spațiilor mari între cuvinte */
+        hyphens: auto; /* Permite despărțirea naturală a cuvintelor */
+        font-size: 1rem; /* Păstrează dimensiunea normală a textului */
+        line-height: 1.5; /* Asigură lizibilitate bună */
+        word-spacing: normal; /* Resetează spațierea între cuvinte */
+        letter-spacing: normal; /* Resetează spațierea între litere */
+    }
+
+    .container {
+        max-width: 90%;
+        margin: 0 auto; /* Asigură că textul rămâne centrat fără să se întindă prea mult */
+    }
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 768px) {
+    ol li, ul li {
+        font-size: 1rem; /* Ajustează dimensiunea fontului */
+    }
+}
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column; /* Elemente pe verticală */
+        align-items: center; /* Centrează conținutul */
+        text-align: center;
+        padding: 15px 0;  /* Reduce padding-ul */
+    }
+
+    footer .footer-content {
+        font-size: 14px; /* Dimensiune mai mică */
+        line-height: 1.4; /* Spațiu echilibrat */
+        max-width: 60%; /* Ajustează lățimea */
+        margin: 0 auto; /* Elimină extra spațiu jos */
+        padding: 0; /* Elimină padding inutil */
+    }
+
+    footer .scrollToTop {
+        font-size: 14px;
+        padding: 6px 12px; /* Ajustează padding-ul doar în interior */
+        text-align: center;
+        margin-top: 5px; /* Urcă butonul mai sus */
+        margin-left: 0; /* Elimină orice decalaj la stânga */
+        display: block;
+        width: fit-content;
     }
 }
 @media (min-width: 769px) {
