@@ -41,14 +41,14 @@
             </label>   
         <nav>
             <ul>
-                <li><a href="./index.html">Acasa</a></li>
+                <li><a href="./index.html" class="acasa-page">Acasa</a></li>
                 <li><a href="./pages/portofoliu.html">Portofoliu</a></li>
                 <li><a href="./pages/blog.html">Blog</a></li>
                 <li><a href="./pages/despre.html">Despre noi</a></li>
                 <li><a href="./pages/contact.html">Contact</a></li>
             </ul>
         </nav>
-        </div> 
+    </div> 
     </header>
     <!--END HEADER-->
     <!--START BANNER-->
@@ -83,6 +83,19 @@
         </div>
         <a href="#" class="scrollToTop">Înapoi la meniul principal</a>
     </footer>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const body = document.body;
+        
+            menuToggle.addEventListener("change", function () {
+                if (menuToggle.checked) {
+                    body.style.overflow = "hidden"; // Blochează scroll-ul
+                } else {
+                    body.style.overflow = ""; // Repornește scroll-ul
+                }
+            });
+        });
+        </script>
 </body>
 </html>
