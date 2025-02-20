@@ -575,10 +575,11 @@ a:hover {
         align-items: center; /* Centrează textul */
         width: 100%;
         text-align: center;
+        margin-top: -70px;
     }
     .acasa-page nav ul li {
         margin-bottom: 10px; 
-        padding: 5px 0;
+        padding: 10px 0;
     }
     .acasa-page nav ul li a {
         font-size: 20px; /* Mărimea fontului pe mobil */
